@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'usuario.dart';
+import 'tela_login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,23 +20,8 @@ class MyApp extends StatelessWidget {
     );
 
     return MaterialApp(
-        home: Scaffold(
-          appBar: AppBar(
-            title: const Text("Meus Dados: ")
-          ),
-          body: Center(
-            child: Padding(padding: const EdgeInsets.all(18.0),
-              child: Column(
-                children: [
-                  Text("Nome: ${u.nome} "),
-                  Text("Código: ${u.codigo}"),
-                  Text("Login: ${u.login}"),
-                  Text("Senha: ${u.senha}")
-                ],
-              )
-            ),
-          )
-        ),
+        debugShowCheckedModeBanner: false,
+        home: Telalogin(),
     );
   }
 }
